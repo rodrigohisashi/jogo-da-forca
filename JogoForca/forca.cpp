@@ -12,11 +12,11 @@
 #include "le_arquivo.hpp"
 #include "sorteia_palavra.hpp"
 #include "adiciona_palavra.hpp"
-// Arquivos de cabeçalho nao pode usar o using namespace std (tira o poder)
+// Arquivos de cabeÃ§alho (hpp)  nao podem usar (recomendavel) o using namespace std (tira a possibilidade de uso em outras funcoes)
 using namespace std;
 
 
-// Uso de static para definir essas variaveis somente nessa unidade de tradução (deixando de ser global) 
+// Uso de static para definir essas variaveis somente nessa unidade de traduÃ§Ã£o (deixando de ser global) 
 // Ou seja nao da pra acessar essas variaveis com o uso de extern
 static string palavra_secreta;
 static map<char, bool> chutou;
@@ -36,7 +36,7 @@ int main()
     while(numero_de_chutes < 5 && Forca::nao_acertou(palavra_secreta, chutou))
     {
        
-        Forca::imprime_erros(chutes_errados);  // estou deixando a funcao mais especifica usando namespace (ver definição da funcao)
+        Forca::imprime_erros(chutes_errados);  // estou deixando a funcao mais especifica usando namespace (ver definiÃ§Ã£o da funcao)
 
         Forca::imprime_palavra(palavra_secreta, chutou);
 
